@@ -19,19 +19,28 @@ body {
 }
 
 .toolbar {
-    padding: 8px;
-    background-color: #d7d7d7;
+    padding: 4px;
+    background-color: #f9feff;
     border-radius: 10px;
-    border: 2px solid rgb(61, 61, 61);
+    border: 1px solid rgb(213, 213, 213);
     flex-shrink: 0;
 }
 
 .toolbar button {
     height: 40px;
+    width: 45px;
     border-radius: 8px;
-    background: #cccccc;
+    border: white;
+    background-color: azure;
 }
 
+.toolbar button:hover {
+    background-color: rgb(193, 234, 239);
+}
+
+#palette {
+    
+}
 .zoom {
     display: flex;
     width: 200px;
