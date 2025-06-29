@@ -4,30 +4,37 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>CollaTrace</title>
+    <title>Tracy</title>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.min.js"></script>
 </head>
 <body>
         
         <div class="header">
-            <div class="logo">LOGO</div>
+            <div class="logo">
+                <img src="tracyLogo.png" alt="Tracy" width="200px">
+            </div>
             <div class="toolbar">
-                <button id="palette"><img src="" alt=""></button>
-                <button>Brush</button>
-                <button>Eraser</button>
-                <button>Line</button>
-                <button>Clear</button>
+                <button id="colorPicker"><img src="paletteIcon.png" alt="a palette icon" width="30px" height="32.5px"></button>
+                <button id="brushSize">Brush</button>
+                <button id="pen" class="active">Pen</button>
+                <button id="eraser">Eraser</button>
+                <button id="line">Line</button>
+                <button id="clear">Clear</button>
             </div>
             <div class="zoom">
-                <button>+</button>
-                <button>-</button>
+                <button><img src="zoomIn.webp" alt="zoom in" width = "30px" height="30px"></button>
+                <button><img src="zoomOut.webp" alt="zoom out" width="30px" height="30px"></button>
             </div>
         </div>
 
         <canvas></canvas>
 
         <div class="footer">
-            <button>Import</button>
+            <button><img src="importIcon.webp" alt="import image" width="30px" height="30px"></button>
         </div>
+
+        <script src="trace.js"></script>
     
 </body>
 </html>

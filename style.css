@@ -14,33 +14,44 @@ body {
 .logo {
     height: 48px;
     width: 200px;
-    background-color: #cccccc;
     flex-shrink: 0;
 }
 
 .toolbar {
     padding: 4px;
-    background-color: #f9feff;
+    background-color: #f6f6f6;
     border-radius: 10px;
     border: 1px solid rgb(213, 213, 213);
     flex-shrink: 0;
+    display: flex;
 }
 
-.toolbar button {
-    height: 40px;
+.header button {
+    height: 45px;
     width: 45px;
     border-radius: 8px;
     border: white;
-    background-color: azure;
+    background-color: rgb(244, 244, 244);    
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.toolbar button:hover {
-    background-color: rgb(193, 234, 239);
+.footer button {
+    height: 45px;
+    width: 45px;
+    border-radius: 8px;
+    border: 1px solid rgb(132, 132, 132);
 }
 
-#palette {
-    
+button:hover {
+    background-color: rgb(225, 225, 225);
 }
+
+#pen:focus, #eraser:focus {
+    background-color: rgb(91, 91, 91);
+}
+
 .zoom {
     display: flex;
     width: 200px;
@@ -52,9 +63,10 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 20px;
-    width: 20px;
+    height: 40px;
+    width: 40px;
     border-radius: 50%;
+    border: 1px solid gray;
 }
 
 .canvas {
@@ -64,4 +76,5 @@ body {
 
 .footer {
     display: flex;
+    height: 45px;
 }
