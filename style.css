@@ -1,0 +1,58 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 16px;
+}
+
+
+.header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo {
+    height: 48px;
+    width: 200px;
+    background-color: #cccccc;
+    flex-shrink: 0;
+}
+
+.toolbar {
+    padding: 8px;
+    background-color: #d7d7d7;
+    border-radius: 10px;
+    border: 2px solid rgb(61, 61, 61);
+    flex-shrink: 0;
+}
+
+.toolbar button {
+    height: 40px;
+    border-radius: 8px;
+    background: #cccccc;
+}
+
+.zoom {
+    display: flex;
+    width: 200px;
+    flex-shrink: 0;
+    gap: 20px;
+}
+
+.zoom button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+}
+
+.canvas {
+    display: flex;
+    justify-content: stretch;
+}
+
+.footer {
+    display: flex;
+}
