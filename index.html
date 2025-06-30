@@ -16,7 +16,7 @@
             </div>
             <div class="toolbar">
                 <input type = "color" id="colorPicker" value="#000000"></input>
-                <button id="brushSize">Brush</button>
+                
                 <button id="pen" class="active">Pen</button>
                 <button id="eraser">Eraser</button>
                 <button id="clear">Clear</button>
@@ -26,9 +26,13 @@
                 <button><img src="zoomOut.webp" alt="zoom out" width="30px" height="30px"></button>
             </div>
         </div>
-        
+        <canvas></canvas>
         <div class="footer">
             <button><img src="importIcon.webp" alt="import image" width="30px" height="30px"></button>
+            <div class="sizeSlider">
+                <input id="brushSize" type="range" width="100px" height="30px">Brush Size:  </input>
+                <span id="sizeValue">  5</span>
+            </div>
         </div>
 
         <script src="trace.js"></script>
