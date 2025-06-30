@@ -20,5 +20,32 @@ function setUp() {
     background(255);
     //created the actual canvas, placed where?
 
-    
+    noFill();
+    strokeCap(ROUND);
+    strokeJoin(ROUND);
+
+    p5Canvas.elt.classList.add('canvas');
+
+    //wire the layout to something
+    const colorPicker = document.getElementById('colorPicker');
+    const brushSize = document.getElementById('brushSize');
+    const bruhSizeValue = document.getElementById('sizeValue');
+    const clear = document.getElementById('clear');
+    const pen = document.getElementById('pen');
+    const eraser = document.getElementById('eraser');
+
+    colorPicker.addEventListener('input', (e) => {
+        currentColor = e.target.value;
+        if (eraserActive == true) {
+            eraserActive = false;
+            pen.classList.add("active");
+            eraser.classList.remove("active");
+        }
+    })
+
+    brushSize.addEventListener('input', (e) =>{
+        currentBrushSize = parseInt(e.target.value);
+        
+    })
+
 }
