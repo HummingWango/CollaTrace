@@ -57,7 +57,7 @@ button:hover {
     background-color: rgb(225, 225, 225);
 }
 
-#pen:focus, #eraser:focus {
+.active {
     background-color: rgb(91, 91, 91);
 }
 
