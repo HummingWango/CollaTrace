@@ -11,7 +11,7 @@ let currentColor = '#000000';
             const canvasHeight = Math.min(window.innerHeight * 0.7, 600);
 
             p5Canvas = createCanvas(canvasWidth, canvasHeight);
-            p5Canvas.parent(document.body); // Attaches the canvas directly to the body
+            p5Canvas.parent('canvas'); // Attaches the canvas directly to the body
 
             background(255);
 
