@@ -19,4 +19,6 @@ function setUp() {
 
     background(255);
     //created the actual canvas, placed where?
+
+    
 }
