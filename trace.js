@@ -7,11 +7,12 @@ let currentColor = '#000000';
         let lastTouchY = 0;
 
         function setup() {
-            const canvasWidth = Math.min(window.innerWidth * 0.9, 1000);
-            const canvasHeight = Math.min(window.innerHeight * 0.7, 600);
+            const canvasWidth = Math.max(window.innerWidth * 0.9, 1000);
+            const canvasHeight = Math.max(window.innerHeight * 0.75, 600);
 
             p5Canvas = createCanvas(canvasWidth, canvasHeight);
-            p5Canvas.parent('canvas'); // Attaches the canvas directly to the body
+            //Actually putting the canvas in the
+            p5Canvas.parent('canvas'); 
 
             background(255);
 
@@ -21,38 +22,37 @@ let currentColor = '#000000';
 
             p5Canvas.elt.classList.add('canvas-style');
 
-            // --- Control Panel Element References (UPDATED IDs) ---
             const colorPicker = document.getElementById('colorPicker');
             const brushSizeSlider = document.getElementById('brushSize');
-            const sizeValueSpan = document.getElementById('sizeValue'); // Corrected ID
-            const clearButton = document.getElementById('clear'); // Corrected ID
-            const penToolButton = document.getElementById('pen'); // Corrected ID
-            const eraserToolButton = document.getElementById('eraser'); // Corrected ID
+            const sizeValueSpan = document.getElementById('sizeValue'); 
+            const clearButton = document.getElementById('clear'); 
+            const penToolButton = document.getElementById('pen'); 
+            const eraserToolButton = document.getElementById('eraser'); 
 
             // Set initial active tool class
-            penToolButton.classList.add('active'); // Ensure 'Pen' is active on load
+            penToolButton.classList.add('active'); 
 
             colorPicker.addEventListener('input', (e) => {
                 currentColor = e.target.value;
                 if (isEraserActive) {
                     isEraserActive = false;
-                    penToolButton.classList.add('active'); // Use 'active' class
-                    eraserToolButton.classList.remove('active'); // Use 'active' class
+                    penToolButton.classList.add('active'); 
+                    eraserToolButton.classList.remove('active'); 
                     blendMode(BLEND);
                 }
             });
 
             brushSizeSlider.addEventListener('input', (e) => {
                 currentBrushSize = parseInt(e.target.value);
-                sizeValueSpan.textContent = e.target.value; // Corrected span reference
+                sizeValueSpan.textContent = e.target.value; 
                 console.log('Brush size changed to:', currentBrushSize);
             });
 
             clearButton.addEventListener('click', () => {
                 background(255);
                 isEraserActive = false;
-                penToolButton.classList.add('active'); // Use 'active' class
-                eraserToolButton.classList.remove('active'); // Use 'active' class
+                penToolButton.classList.add('active');
+                eraserToolButton.classList.remove('active'); 
                 blendMode(BLEND);
                 colorPicker.value = "#000000";
                 currentColor = "#000000";
@@ -60,15 +60,15 @@ let currentColor = '#000000';
 
             penToolButton.addEventListener('click', () => {
                 isEraserActive = false;
-                penToolButton.classList.add('active'); // Use 'active' class
-                eraserToolButton.classList.remove('active'); // Use 'active' class
+                penToolButton.classList.add('active'); 
+                eraserToolButton.classList.remove('active'); 
                 blendMode(BLEND);
             });
 
             eraserToolButton.addEventListener('click', () => {
                 isEraserActive = true;
-                eraserToolButton.classList.add('active'); // Use 'active' class
-                penToolButton.classList.remove('active'); // Use 'active' class
+                eraserToolButton.classList.add('active'); 
+                penToolButton.classList.remove('active'); 
                 blendMode(REMOVE);
             });
 

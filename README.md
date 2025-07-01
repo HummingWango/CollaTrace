@@ -1,2 +1,7 @@
-# CollaTrace
-For now, an idea for a web app that allows people to share images that they could trace together or independently, with drawing tools available.
+#Tracy
+
+A webpage that gives you a drawing tool for some easy tracing.
+The image uploading is non-functional.
+Intended to add images in a canvas at an ajustable opacity to trace easily online. 
+
+Idea from the frustration in drawing diagrams, especially in courses like anatomy. 

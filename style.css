@@ -11,6 +11,7 @@ body {
 .header {
     display: flex;
     justify-content: space-between;
+    height: 77px;
 }
 
 .logo {
@@ -27,6 +28,7 @@ body {
     flex-shrink: 0;
     display: flex;
     align-items: center;
+    height: 45px;
     gap: 4px;
 }
 
@@ -57,7 +59,8 @@ button:hover {
     background-color: rgb(225, 225, 225);
 }
 
-.active {
+#pen:focus,
+#eraser:focus {
     background-color: rgb(91, 91, 91);
 }
 
@@ -78,10 +81,12 @@ button:hover {
     border: 1px solid gray;
 }
 
-.canvas {
-
+#canvas {
+    border: 1px solid gray;
+    border-radius: 10px;
+    margin: 16px 0px;
+    width: fit-content;
 }
-
 .footer {
     display: flex;
     height: 45px;
